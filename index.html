@@ -19,6 +19,7 @@
         align-items: center;
         height: 100vh;
         text-align: center;
+        padding: 10px;
       }
 
       h1 {
@@ -32,7 +33,8 @@
         border: 1px solid #41434f;
         border-radius: 15px;
         padding: 30px;
-        width: 400px;
+        width: 100%;
+        max-width: 400px;
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
       }
 
@@ -98,6 +100,7 @@
 
       .button-group button {
         flex: 1;
+        min-width: 100px;
       }
 
       .footer {
@@ -113,6 +116,25 @@
 
       .footer a:hover {
         text-decoration: underline;
+      }
+
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 2rem;
+        }
+
+        button {
+          font-size: 0.9rem;
+          padding: 10px;
+        }
+
+        label {
+          font-size: 1rem;
+        }
+
+        .container {
+          padding: 20px;
+        }
       }
     </style>
   </head>
