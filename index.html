@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fund Me App</title>
+    <style>
+      /* Reset and base styling */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background: linear-gradient(135deg, #1a1b27 0%, #3b3c4d 100%);
+        color: #d3d3d3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #ffffff;
+      }
+
+      .container {
+        background: #26282f;
+        border: 1px solid #41434f;
+        border-radius: 15px;
+        padding: 30px;
+        width: 400px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      label {
+        display: block;
+        margin: 20px 0 10px;
+        font-size: 1.1rem;
+        color: #d3d3d3;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #41434f;
+        border-radius: 5px;
+        background: #2c2e36;
+        color: #d3d3d3;
+        outline: none;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      input:focus {
+        border-color: #6366f1;
+        box-shadow: 0 0 5px rgba(99, 102, 241, 0.6);
+      }
+
+      button {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #ffffff;
+        background: linear-gradient(135deg, #6366f1, #818cf8);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+      }
+
+      button:active {
+        transform: translateY(0);
+        box-shadow: 0 4px 10px rgba(99, 102, 241, 0.2);
+      }
+
+      button:disabled {
+        background: #41434f;
+        cursor: not-allowed;
+      }
+
+      .button-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+      }
+
+      .button-group button {
+        flex: 1;
+      }
+
+      .footer {
+        margin-top: 20px;
+        font-size: 0.85rem;
+        color: #a1a1aa;
+      }
+
+      .footer a {
+        color: #6366f1;
+        text-decoration: none;
+      }
+
+      .footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Total funded: <div id="totalFunded"></div></h1>
+      <div class="button-group">
+        <button id="connectButton">Connect</button>
+        <button id="balanceButton">Get Balance</button>
+        <button id="withdrawButton">Withdraw</button>
+      </div>
+      <label for="ethAmount">ETH Amount</label>
+      <input id="ethAmount" placeholder="0.1" />
+      <button type="button" id="fundButton">Fund</button>
+      <div class="footer">
+        <p>
+          Powered by <a href="https://ethereum.org" target="_blank">Ethereum</a>
+        </p>
+      </div>
+    </div>
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>
