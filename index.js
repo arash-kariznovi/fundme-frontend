@@ -22,6 +22,7 @@ async function connect() {
       totalFunded.textContent = ethers.formatEther(balance);
     } catch (error) {
       console.log(error)
+      alert(error)
     }
     connectButton.innerHTML = "Connected"
     const accounts = await ethereum.request({ method: "eth_accounts" })
@@ -48,6 +49,7 @@ async function withdraw() {
       totalFunded.textContent = ethers.formatEther(balance);
     } catch (error) {
       console.log(error)
+      alert(error)
     }
   } else {
     withdrawButton.innerHTML = "Please install MetaMask"
@@ -72,6 +74,7 @@ async function fund() {
       totalFunded.textContent = ethers.formatEther(balance);
     } catch (error) {
       console.log(error)
+      alert(error)
     }
   } else {
     fundButton.innerHTML = "Please install MetaMask"
@@ -87,6 +90,7 @@ async function getBalance() {
       alert(`The balance is ${ethers.formatEther(balance)}ETH.`)
     } catch (error) {
       console.log(error)
+      alert(error)
     }
   } else {
     balanceButton.innerHTML = "Please install MetaMask"
